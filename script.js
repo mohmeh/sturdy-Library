@@ -20,7 +20,7 @@ for (const book of library){
 }
 function onClick(){
   return CreateBook;
-},
+};
 var newBook = document.createElement('button');
 newBook.innerText = "Add new Book";
 newBook.addEventListener('click', onClick);
