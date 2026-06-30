@@ -1,9 +1,10 @@
 const library = [];
 
-function CreateBook (author, title, pages){ 
+function CreateBook (author, title, pages, readStatus){ 
   this.author = author;
   this.title = title;
   this.pages = pages;
+  this.readStatus = readStatus;
   this.id = crypto.randomUUID();
 }
 
@@ -12,12 +13,24 @@ addBookToLibrary:function (){
 library.push(this.book)};
 };
 
-function displayLibrary (){
-for (const book of library){
-  console.log(library);
+
+let display = document.getElementById('library-container');
+function displayLibrary() {
+    display.innerHTML = "";
+  for (const book of library) {
+        const card = document.createElement('div');
+    card.classList.add('card'); // Give it a class name for CSS styling
+    card.innerHTML = `
+      <h3>${book.title}</h3>
+      <p><strong>Author:</strong> ${book.author}</p>
+      <p><strong>Pages:</strong> ${book.pages}</p>
+      <p><strong>Status:</strong> ${book.readStatus}</p>
+    `;
+    display.appendChild(card);
+  }
 }
-  displayLibrary();
-};
+
+
 function onClick(){
   return CreateBook;
 };
