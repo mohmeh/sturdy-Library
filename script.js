@@ -51,7 +51,7 @@ function displayLibrary() {
     `;
 
     // ---- Remove button ----
-    const removeBtn = document.createElement('button');
+    const removeBtn = document.getElementById('rmv-btn');
     removeBtn.textContent = 'Remove';
     removeBtn.dataset.id = book.id;
     removeBtn.addEventListener('click', (e) => {
@@ -59,7 +59,7 @@ function displayLibrary() {
     });
 
     // ---- Toggle read button ----
-    const toggleBtn = document.createElement('button');
+    const toggleBtn = document.getElementById('r-status');
     toggleBtn.textContent = 'Toggle Read';
     toggleBtn.dataset.id = book.id;
     toggleBtn.addEventListener('click', (e) => {
