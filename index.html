@@ -8,8 +8,17 @@
 </head> 
 <body>
 <h1>What would this look like</h1>
+  <button id="menu-btn">Add New Book</button>
+<form id="book-form" style="display: none; margin: 20px 0; padding: 15px; border: 1px solid #ccc;">
+  <input type="text" id="title" placeholder="Book Title" required><br><br>
+  <input type="text" id="author" placeholder="Author" required><br><br>
+  <input type="number" id="pages" placeholder="Pages" required><br><br>
+  <button type="submit">Submit Book</button>
+</form>
+   <button id="rmv-btn">Remove Book</button>
+  <button id="r-status">Read Status</button>
   <div id="library-container"></div>
-  <button id="menu-btn">Click Me!</button>
+  
 <script src="script.js"> </script>
 </body>
 </html>
