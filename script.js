@@ -29,7 +29,8 @@ function displayLibrary() {
     display.appendChild(card);
   }
 }
-
+library.push(new CreateBook('Moh', 'Bug bounty Js', '541'));
+displayLibrary();
 
 function onClick(){
   return CreateBook;
